@@ -96,7 +96,7 @@ print('tokens: '+ str(len(tokens)))
 fillWords = getFillWords(tokens, fillWordCount)
 print('fillWords', fillWords)
 
-features = selectFeatures(trainData, takeTop, takeBottom, addSimilarFeature=True, similarFeaturesThreshold=0.7)
+features = selectFeatures(trainData, takeTop, takeBottom, addSimilarFeature=True, similarFeaturesThreshold=0.9)
 print('features: '+str(len(features)))
 print(features)
 

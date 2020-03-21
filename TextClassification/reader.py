@@ -1,5 +1,8 @@
 import csv
 
+def getPath():
+	return './TextClassification/data/'
+
 #spam.csc
 #v1,v2,,,
 #ham,"Go until jurong point, crazy..
@@ -13,16 +16,16 @@ def readRawDataFor(source):
 		#spam.csv
 		#v1,v2,,,
 		#ham,"Go until jurong point, crazy..
-		return readRawData('./data/spam.csv', 1, 0)
+		return readRawData(getPath()+'spam.csv', 1, 0)
 	if source=='clothing':
 		#clothing
 		#ID, ClothingID, Age, Title, ReviewText, Rating, RecommendedIND, PositiveFeedbackCount, DivisionName, DepartmentName, ClassName
 		#0, 767, 33, ,Absolutely wonderful - silky and sexy and comfortable, 4, 1, 0, Initmates, Intimate, Intimates
-		return readRawData('./data/clothing.csv', 4, 5)
+		return readRawData(getPath()+'clothing.csv', 4, 5)
 	if source=='disaster':
-		return readRawData('./data/nlp-getting-started/train.csv', 3, 4)
+		return readRawData(getPath()+'nlp-getting-started/train.csv', 3, 4)
 	if source=='':
-		return readRawData('./data/nlp-getting-started/train.csv', 3, 4)
+		return readRawData(getPath()+'nlp-getting-started/train.csv', 3, 4)
 
 def readRawData(sourcePath, idxText, idxLabel):
 	with open(sourcePath, 'r', encoding='latin-1') as csvfile:

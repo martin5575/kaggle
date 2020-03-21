@@ -86,7 +86,7 @@ if __name__ == '__main__':
 	
 	# spam, clothing, disaster
 	rawDataName = 'disaster' 
-	testSetPercentage = 0.01
+	testSetPercentage = 0.1
 	
 	#main
 	rawData = readRawDataFor(rawDataName)
@@ -100,7 +100,7 @@ if __name__ == '__main__':
 	#printDetails(predictionsWithScore, gold)
 	predictions = [c for (c,s) in predictionsWithScore]
 	analyze(gold, predictions, classes)
-	printErrors(testSet, predictions, '0')
-	printErrors(testSet, predictions, '1')
+	#printErrors(testSet, predictions, '0')
+	#printErrors(testSet, predictions, '1')
 	
 

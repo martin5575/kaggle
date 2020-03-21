@@ -11,7 +11,7 @@ def hasSynset(word):
 	
 
 # spam, clothing, disaster
-rawData = readRawDataFor('clothing')
+rawData = readRawDataFor('disaster')
 cleanedData = cleanRawData(rawData)
 random.shuffle(cleanedData)
 trainData, testData = split(cleanedData, 0.1)
